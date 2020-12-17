@@ -40,6 +40,12 @@ The dataset directory structure should be
         ├── 1.mat  
         └── ...
 ```
+**Note:** We convert the `*_f.png` files in  `Saliency4ASD\TrainingDataset\AdditionalData\ASD_FixPts\` to MAT file by following code:
+```Matlab
+% Matlab Code
+im = imread('1_f.png');
+save('1.mat', 'im');
+```
 
 ## Testing
 Clone this repository and download the pretrained weights.
@@ -58,6 +64,10 @@ keras	2.2.2
 theano	0.9.0  
 opencv	3.1.0  
 matplotlib	2.0.2  
+
+## Update:
+### 2020/12/17
+The original Saliency4ASD only contains FixPts in PNG format. We provide a simple code to convert the PNG file to MAT file for easy-using of our model.
 
 ## Acknowledgement
 The code is heavily inspired by the following project:
